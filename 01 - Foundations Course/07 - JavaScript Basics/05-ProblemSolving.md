@@ -3,9 +3,9 @@ Before we start digging into some pretty nifty JavaScript, we need to begin talk
 
 Problem solving is the core thing software developers do. The programming languages and tools they use are secondary to this fundamental skill.
 
-V. Anton Spraul defines problem solving in programming as:
-  Problem solving is writing an original program that performs a particular set of tasks and meets all stated constraints.
-  - Think Like a Programmer
+  V. Anton Spraul defines problem solving in programming as:
+    Problem solving is writing an original program that performs a particular set of tasks and meets all stated constraints.
+    - Think Like a Programmer
 
 The set of tasks can range from solving small coding exercises all the way up to building a social network site like Facebook or a search engine like Google. Each problem has its own set of constraints, for example, high performance and scalability may not matter too much in a coding exercise but it will be vital in apps like Google that need to service billions of search queries each day.
 
@@ -18,9 +18,10 @@ In this lesson we will walk through a few techniques that can be used to help wi
 Lesson Overview
 This section contains a general overview of topics that you will learn in this lesson.
 
-Explain the three steps in the problem solving process.
-Explain what pseudocode is and be able to use it to solve problems.
-Be able to break a problem down into subproblems.
+  - Explain the three steps in the problem solving process.
+  - Explain what pseudocode is and be able to use it to solve problems.
+  - Be able to break a problem down into subproblems.
+
 Understand the Problem
 The first step to solving a problem is understanding exactly what the problem is. If you don’t understand the problem, you won’t know when you’ve successfully solved it and may waste a lot of time on a wrong solution.
 
@@ -29,10 +30,11 @@ To gain clarity and understanding of the problem, write it down on paper, reword
 Plan
 Now that you know what you’re aiming to solve, don’t jump into coding just yet. It’s time to plan out how you’re going to solve it first. Some of the questions you should answer at this stage of the process:
 
-Does your program have a user interface? What will it look like? What functionality will the interface have? Sketch this out on paper.
-What inputs will your program have? Will the user enter data or will you get input from somewhere else?
-What’s the desired output?
-Given your inputs, what are the steps necessary to return the desired output?
+- Does your program have a user interface? What will it look like? What functionality will the interface have? Sketch this out on paper.
+- What inputs will your program have? Will the user enter data or will you get input from somewhere else?
+- What’s the desired output?
+- Given your inputs, what are the steps necessary to return the desired output?
+
 The last question is where you will write out an algorithm to solve the problem. You can think of an algorithm as a recipe for solving a particular problem. It defines the steps that need to be taken by the computer to solve a problem in pseudocode.
 
 Pseudocode
@@ -40,10 +42,11 @@ Pseudocode is writing out the logic for your program in natural language instead
 
 Here’s an example of what the pseudocode for a simple program that prints all numbers up to an inputted number might look like:
 
-When the user inputs a number
-Initialize a counter variable and set its value to zero
-While counter is smaller than user inputted number increment the counter by one
-Print the value of the counter variable
+    When the user inputs a number
+    Initialize a counter variable and set its value to zero
+    While counter is smaller than user inputted number increment the counter by one
+    Print the value of the counter variable
+
 This is a very simple program to demonstrate how pseudocode looks. There will be more examples of pseudocode included in the assignments.
 
 Divide and Conquer
@@ -59,7 +62,7 @@ Solving Fizz Buzz
 To demonstrate this workflow in action, let’s solve a common programming exercise: FizzBuzz.
 
 Understanding The Problem
-Write a program that takes a user’s input and prints the numbers from one to the number the user entered. However, for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
+  Write a program that takes a user’s input and prints the numbers from one to the number the user entered. However, for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
 
 This is the big picture problem we will be solving. It’s pretty simple so we may not need to reword it. But we can always make it clearer by rewording it.
 
@@ -75,130 +78,133 @@ What’s the desired output? The desired output is a list of numbers from 1 to t
 Pseudocode
 What are the steps necessary to return the desired output? Here is an algorithm in pseudocode for this problem:
 
-When a user inputs a number
-Loop from 1 to the entered number
-If the current number is divisible by 3 then print "Fizz"
-If the current number is divisible by 5 then print "Buzz"
-If the current number is divisible by 3 and 5 then print "FizzBuzz"
-Otherwise print the current number
+    When a user inputs a number
+    Loop from 1 to the entered number
+    If the current number is divisible by 3 then print "Fizz"
+    If the current number is divisible by 5 then print "Buzz"
+    If the current number is divisible by 3 and 5 then print "FizzBuzz"
+    Otherwise print the current number
+
 Divide and Conquer (Implement)
 As we can see from the algorithm we developed, the first subproblem we can solve is getting input from the user. So let’s start there and verify it works by printing the entered number.
 
 With JavaScript, we’ll use the “prompt” method.
+      let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
 The above code should create a little popup box that asks the user for a number. The input we get back will be stored in our variable answer. Note: We wrapped the prompt call in a parseInt function so that a number is returned from the user’s input.
 
 With that done, let’s move on to the next subproblem: “Loop from 1 to the entered number”. There are many ways to do this in JavaScript. One of the common ways - that you actually see in many other languages like Java, C++, and Ruby - is with the for loop:
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      for (let i = 1; i <= answer; i++) {
+        console.log(i);
+      }
 
-for (let i = 1; i <= answer; i++) {
-  console.log(i);
-}
 If you haven’t seen this before and it looks strange, it’s actually straightforward. We declare a variable i and assign it 1: the initial value of the variable i in our loop (NOTE: Most of the time, programmers find themselves looping from 0. Due to the needs of our program, we’re starting from 1). The second clause, i <= answer is our condition. We want to loop until i is greater than answer. The third clause, i++, tells our loop to increment i by 1 every iteration. As a result, if the user inputs 10, this loop would print numbers 1 - 10 to the console.
 
 With that working, let’s move on to the next problem: If the current number is divisible by 3, then print Fizz.
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      for (let i = 1; i <= answer; i++) {
+        if (i % 3 === 0) {
+          console.log("Fizz");
+        } else {
+          console.log(i);
+        }
+      }
 
-for (let i = 1; i <= answer; i++) {
-  if (i % 3 === 0) {
-    console.log("Fizz");
-  } else {
-    console.log(i);
-  }
-}
 We are using the modulus operator (%) here to divide the current number by three. If you recall from a previous lesson, the modulus operator returns the remainder of a division. So if a remainder of 0 is returned from the division, it means the current number is divisible by 3.
 
 After this change the program will now output this when you run it and the user inputs 10:
 
-1
-2
-Fizz
-4
-5
-Fizz
-7
-8
-Fizz
-10
+      1
+      2
+      Fizz
+      4
+      5
+      Fizz
+      7
+      8
+      Fizz
+      10
+
 The program is starting to take shape. The final few subproblems should be easy to solve as the basic structure is in place and they are just different variations of the condition we’ve already got in place. Let’s tackle the next one: If the current number is divisible by 5 then print Buzz.
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
-
-for (let i = 1; i <= answer; i++) {
-  if (i % 3 === 0) {
-    console.log("Fizz");
-  } else if (i % 5 === 0) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
-  }
-}
+      let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      for (let i = 1; i <= answer; i++) {
+        if (i % 3 === 0) {
+          console.log("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
 When you run the program now, you should see this output if the user inputs 10:
 
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
+      1
+      2
+      Fizz
+      4
+      Buzz
+      Fizz
+      7
+      8
+      Fizz
+      Buzz
+
 We have one more subproblem to solve to complete the program: If the current number is divisible by 3 and 5 then print FizzBuzz.
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+      for (let i = 1; i <= answer; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+          console.log("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
 
-for (let i = 1; i <= answer; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz");
-  } else if (i % 3 === 0) {
-    console.log("Fizz");
-  } else if (i % 5 === 0) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
-  }
-}
 We’ve had to move the conditionals around a little to get it to work. The first condition now checks if i is divisible by 3 and 5 instead of checking if i is just divisible by 3. We’ve had to do this because if we kept it the way it was, it would run the first condition if (i % 3 === 0), so that if i was divisible by 3, it would print Fizz and then move on to the next number in the iteration, even if i was divisible by 5 as well.
 
 With the condition if (i % 3 === 0 && i % 5 === 0) coming first, we check that i is divisible by both 3 and 5 before moving on to check if it is divisible by 3 or 5 individually in the else if conditions.
 
 The program is now complete! If you run it now you should get this output when the user inputs 20:
 
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
-Fizz
-19
-Buzz
+      1
+      2
+      Fizz
+      4
+      Buzz
+      Fizz
+      7
+      8
+      Fizz
+      Buzz
+      11
+      Fizz
+      13
+      14
+      FizzBuzz
+      16
+      17
+      Fizz
+      19
+      Buzz
+
 Assignment
-Read How to Think Like a Programmer - Lessons in Problem Solving by Richard Reis.
-Watch How to Begin Thinking Like a Programmer by Coding Tech. It’s an hour long but packed full of information and definitely worth your time watching.
-Read this What is Pseudocoding article from The Viking Code School.
+- Read How to Think Like a Programmer - Lessons in Problem Solving (https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/) by Richard Reis.
+- Watch How to Begin Thinking Like a Programmer (https://www.youtube.com/watch?v=azcrPFhaY9k) by Coding Tech. It’s an hour long but packed full of information and definitely worth your time watching.
+- Read this What is Pseudocoding (https://web.archive.org/web/20211229231605/https://www.vikingcodeschool.com/software-engineering-basics/what-is-pseudo-coding) article from The Viking Code School.
 
 Additional Resources
 This section contains helpful links to other content. It isn’t required, so consider it supplemental.
 
-Read the first chapter in Think Like a Programmer: An Introduction to Creative Problem Solving (not free). This book’s examples are in C++, but you will understand everything since the main idea of the book is to teach programmers to better solve problems. It’s an amazing book and worth every penny. It will make you a better programmer.
-Watch this video on repetitive programming techniques.
+- Read the first chapter in Think Like a Programmer: An Introduction to Creative Problem Solving. (https://github.com/b09/c_resources/blob/master/Think%20Like%20a%20Programmer%20-%20An%20Intro.%20to%20Creative%20Problem%20Solving%20-%20V.%20Spraul%20(No%20Starch%2C%202012)%20BBS.pdf) This book’s examples are in C++, but you will understand everything since the main idea of the book is to teach programmers to better solve problems. It’s an amazing book and worth every penny. It will make you a better programmer.
+- Watch this video on repetitive programming techniques (https://ocw.mit.edu/courses/res-tll-004-stem-concept-videos-fall-2013/resources/basic-programming-techniques/).
 
 Knowledge Check
 This section contains questions for you to check your understanding of this lesson on your own. If you’re having trouble answering a question, click it and review the material it links to.

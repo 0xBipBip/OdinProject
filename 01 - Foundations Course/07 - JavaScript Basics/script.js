@@ -29,3 +29,4 @@ string:
 
 // FROM: 05-ProblemSolving.md
 
+let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
