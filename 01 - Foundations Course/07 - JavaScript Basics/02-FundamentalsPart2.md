@@ -196,28 +196,30 @@ module.exports = {
 Additional Resources
 This section contains helpful links to other content. It isn’t required, so consider it supplemental.
 
-Regular expressions, commonly known as regex, are a tool that matches or locates patterns in strings for string validation. Although it shouldn’t be your immediate solution this early on, you can still use this resource to understand how websites know that myemail@com isn’t a valid email address. On top of that, other solutions to filter out strings exist, and regex is considered a slow operation.
+  - Regular expressions, commonly known as regex, are a tool that matches or locates patterns in strings for string validation. Although it shouldn’t be your immediate solution this early on, you can still use this resource to understand how websites know that myemail@com isn’t a valid email address. On top of that, other solutions to filter out strings exist, and regex is considered a slow operation.
 
-The Net Ninja’s Regular Expressions Tutorial.
-When to avoid regular expressions.
+  - The Net Ninja’s Regular Expressions Tutorial (https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD).
+
+  - When to avoid regular expressions (https://softwareengineering.stackexchange.com/questions/113237/when-you-should-not-use-regular-expressions).
+
 Knowledge Check
 This section contains questions for you to check your understanding of this lesson on your own. If you’re having trouble answering a question, click it and review the material it links to.
 
-What are the eight data types in JavaScript?
-Which data type is NOT primitive?
-What is the relationship between null and undefined?
-What is the difference between single, double, and backtick quotes for strings?
-What is the term for joining strings together?
-Which type of quote lets you embed variables/expressions in a string?
-How do you embed variables/expressions in a string?
-How do you use escape characters in a string?
-What is the difference between the slice/substring/substr string methods?
-What are the three logical operators and what do they stand for?
-What are the comparison operators?
-What are truthy and falsy values?
-What are the falsy values in JavaScript?
-What are conditionals?
-What is the syntax for an if/else conditional?
-What is the syntax for a switch statement?
-What is the syntax for a ternary operator?
-What is nesting?
+      What are the eight data types in JavaScript?
+      Which data type is NOT primitive?
+      What is the relationship between null and undefined?
+      What is the difference between single, double, and backtick quotes for strings?
+      What is the term for joining strings together?
+      Which type of quote lets you embed variables/expressions in a string?
+      How do you embed variables/expressions in a string?
+      How do you use escape characters in a string?
+      What is the difference between the slice/substring/substr string methods?
+      What are the three logical operators and what do they stand for?
+      What are the comparison operators?
+      What are truthy and falsy values?
+      What are the falsy values in JavaScript?
+      What are conditionals?
+      What is the syntax for an if/else conditional?
+      What is the syntax for a switch statement?
+      What is the syntax for a ternary operator?
+      What is nesting?

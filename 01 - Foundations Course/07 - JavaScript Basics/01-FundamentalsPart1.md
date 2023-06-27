@@ -94,16 +94,16 @@ The precise differences between var and let is explained in javascript.info (htt
 Knowledge Check
 This section contains questions for you to check your understanding of this lesson on your own. If you’re having trouble answering a question, click it and review the material it links to.
 
-Name the three ways to declare a variable
-Which of the three variable declarations should you avoid and why?
-What rules should you follow when naming variables?
-What happens when you add numbers and strings together?
-How does the Modulo (%), or Remainder, operator work?
-Explain the difference between == and ===.
-When would you receive a NaN result?
-How do you increment and decrement a number?
-Explain the difference between prefixing and postfixing increment/decrement operators.
-What is operator precedence and how is it handled in JS?
-How do you access developer tools and the console?
-How do you log information to the console?
-What does unary plus operator do to string representations of integers? eg. +”10”
+      Name the three ways to declare a variable
+      Which of the three variable declarations should you avoid and why?
+      What rules should you follow when naming variables?
+      What happens when you add numbers and strings together?
+      How does the Modulo (%), or Remainder, operator work?
+      Explain the difference between == and ===.
+      When would you receive a NaN result?
+      How do you increment and decrement a number?
+      Explain the difference between prefixing and postfixing increment/decrement operators.
+      What is operator precedence and how is it handled in JS?
+      How do you access developer tools and the console?
+      How do you log information to the console?
+      What does unary plus operator do to string representations of integers? eg. +”10”
