@@ -1,4 +1,4 @@
-// FROM: "04 - Fundamentals Part 3"
+// FROM: 04-FundamentalsPart3.md
 /* Assignment
 For now, just write each function and test the output with console.log.
 
@@ -26,3 +26,6 @@ string:
         lastLetter("abcd") should return "d"
 
 */
+
+// FROM: 05-ProblemSolving.md
+
