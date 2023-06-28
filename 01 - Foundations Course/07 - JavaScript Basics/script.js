@@ -28,5 +28,19 @@ string:
 */
 
 // FROM: 05-ProblemSolving.md
+//let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+// FROM: 06-UnderstandingErrors.md
+/*const a = "Hello"
+const b = "World"
+console.log(c)*/
+
+const a = 5;
+const b = 10;
+function add() {
+  return c;
+}
+function print() {
+  add();
+}
+print();
