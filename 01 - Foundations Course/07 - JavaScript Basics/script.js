@@ -33,7 +33,7 @@ string:
 // FROM: 06-UnderstandingErrors.md
 /*const a = "Hello"
 const b = "World"
-console.log(c)*/
+console.log(c)
 
 const a = 5;
 const b = 10;
@@ -44,3 +44,16 @@ function print() {
   add();
 }
 print();
+*/
+
+// 07-Project-RockPapperScissors.md
+
+//Computer Choice function
+let computerChoice = "";
+function randomNumber () {
+    //console.log(parseInt(Math.random()*3+1));
+    computerChoice = parseInt(Math.random()*3+1);
+  return;
+}
+randomNumber();
+console.log(computerChoice);
