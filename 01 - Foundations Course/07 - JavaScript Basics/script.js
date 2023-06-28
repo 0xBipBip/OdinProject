@@ -48,12 +48,15 @@ print();
 
 // 07-Project-RockPapperScissors.md
 
+//User Choice function
+let userChoice = window.prompt("Choose your option", "rock,paper or scissors?");
+
 //Computer Choice function
 let computerChoice = "";
-function randomNumber () {
-    //console.log(parseInt(Math.random()*3+1));
-    computerChoice = parseInt(Math.random()*3+1);
+function randomNumber () {  
+        computerChoice = (Math.floor(Math.random()*3+1));
   return;
 }
 randomNumber();
 console.log(computerChoice);
+console.log(userChoice);
