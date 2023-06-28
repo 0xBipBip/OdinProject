@@ -1,5 +1,3 @@
-// 07-Project-RockPapperScissors.md
-
 //User Choice function
 let userChoice = window.prompt("Choose your option", "rock,paper or scissors?");
 
@@ -12,6 +10,9 @@ function randomNumber () {
 randomNumber();
 console.log(computerChoice);
 console.log(userChoice);
+
+
+
 
 
 
