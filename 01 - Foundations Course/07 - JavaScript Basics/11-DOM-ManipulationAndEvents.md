@@ -227,89 +227,92 @@ Using named functions can clean up your code considerably, and is a really good 
 
 With all three methods we can access more information about the event by passing a parameter to the function that we are calling. Try this out on your own machine:
 
-btn.addEventListener('click', function (e) {
-  console.log(e);
-});
-*Note that function (e) is a callback from addEventListener. Further explanation of callbacks can be found HERE.
+    btn.addEventListener('click', function (e) {
+    console.log(e);
+    });
+*Note that function (e) is a callback from addEventListener. Further explanation of callbacks can be found HERE (https://dev.to/i3uckwheat/understanding-callbacks-2o9e).
 
 The e in that function is an object that references the event itself. Within that object you have access to many useful properties and methods (functions that live inside an object) such as which mouse button or key was pressed, or information about the event’s target - the DOM node that was clicked.
 
 Try this:
 
-btn.addEventListener('click', function (e) {
-  console.log(e.target);
-});
+    btn.addEventListener('click', function (e) {
+    console.log(e.target);
+    });
 and now this:
 
-btn.addEventListener('click', function (e) {
-  e.target.style.background = 'blue';
-});
+    btn.addEventListener('click', function (e) {
+    e.target.style.background = 'blue';
+    });
 Pretty cool, eh?
 
 Attaching Listeners to Groups of Nodes
 This might seem like a lot of code if you’re attaching lots of similar event listeners to many elements. There are a few ways to go about doing that more efficiently. We learned above that we can get a nodelist of all of the items matching a specific selector with querySelectorAll('selector'). In order to add a listener to each of them we simply need to iterate through the whole list like so:
 
-<div id="container">
-    <button id="1">Click Me</button>
-    <button id="2">Click Me</button>
-    <button id="3">Click Me</button>
-</div>
-// buttons is a node list. It looks and acts much like an array.
+    <div id="container">
+        <button id="1">Click Me</button>
+        <button id="2">Click Me</button>
+        <button id="3">Click Me</button>
+    </div>
+
 const buttons = document.querySelectorAll('button');
+// buttons is a node list. It looks and acts much like an array.
 
-// we use the .forEach method to iterate through each button
 buttons.forEach((button) => {
-
-  // and for each one we add a 'click' listener
+// we use the .forEach method to iterate through each button
+  
   button.addEventListener('click', () => {
     alert(button.id);
   });
 });
+// and for each one we add a 'click' listener
+
 This is just the tip of the iceberg when it comes to DOM manipulation and event handling, but it’s enough to get you started with some exercises. In our examples so far we have been using the ‘click’ event exclusively, but there are many more available to you.
 
 Some useful events include:
-
-click
-dblclick
-keydown
-keyup
-You can find a more complete list with explanations of each event on this page.
+    - click
+    - dblclick
+    - keydown
+    - keyup
+You can find a more complete list with explanations of each event on this page (https://www.w3schools.com/jsref/dom_obj_event.asp).
 
 Assignment
 Manipulating web pages is the primary benefit of the JavaScript language! These techniques are things that you are likely to be messing with every day as a front-end developer, so let’s practice!
 
-Grab the first exercise in Wes Bos’s JavaScript30 program by cloning the repo at https://github.com/wesbos/JavaScript30. Code along with the Video Tutorial to build the rest of the exercise. In the video you will notice that a deprecated keycode keyboard event is used, replace it with the recommended code keyboard event and replace the data-key tags accordingly.
-Watch the Event Capture, Propagation and Bubbling video from Wes Bos’s JavaScript30 program. If you want to code along with the video, you can use the contents of folder #25 from the repo you cloned above.
+    - Grab the first exercise in Wes Bos’s JavaScript30 program by cloning the repo at https://github.com/wesbos/JavaScript30. Code along with the Video Tutorial to build the rest of the exercise. In the video you will notice that a deprecated keycode keyboard event is used, replace it with the recommended code keyboard event and replace the data-key tags accordingly.
+    - Watch the Event Capture, Propagation and Bubbling video from Wes Bos’s JavaScript30 program. If you want to code along with the video, you can use the contents of folder #25 from the repo you cloned above.
+
 Knowledge Check
 This section contains questions for you to check your understanding of this lesson on your own. If you’re having trouble answering a question, click it and review the material it links to.
 
-What is the DOM?
-How do you target the nodes you want to work with?
-How do you create an element in the DOM?
-How do you add an element to the DOM?
-How do you remove an element from the DOM?
-How can you alter an element in the DOM?
-When adding text to a DOM element, should you use textContent or innerHTML? Why?
-Where should you include your JavaScript tag in your HTML file when working with DOM nodes?
-How do “events” and “listeners” work?
-What are three ways to use events in your code?
-Why are event listeners the preferred way to handle events?
-What are the benefits of using named functions in your listeners?
-How do you attach listeners to groups of nodes?
-What is the difference between the return values of querySelector and querySelectorAll?
-What does a “nodelist” contain?
-Explain the difference between “capture” and “bubbling”.
+    - What is the DOM?
+    - How do you target the nodes you want to work with?
+    - How do you create an element in the DOM?
+    - How do you add an element to the DOM?
+    - How do you remove an element from the DOM?
+    - How can you alter an element in the DOM?
+    - When adding text to a DOM element, should you use textContent or innerHTML? Why?
+    - Where should you include your JavaScript tag in your HTML file when working with DOM nodes?
+    - How do “events” and “listeners” work?
+    - What are three ways to use events in your code?
+    - Why are event listeners the preferred way to handle events?
+    - What are the benefits of using named functions in your listeners?
+    - How do you attach listeners to groups of nodes?
+    - What is the difference between the return values of querySelector and querySelectorAll?
+    - What does a “nodelist” contain?
+    - Explain the difference between “capture” and “bubbling”.
+
 Additional Resources
 This section contains helpful links to related content. It isn’t required, so consider it supplemental.
 
-Eloquent JS - DOM
-Eloquent JS - Handling Events
-DOM Enlightenment
-Plain JavaScript is a reference of JavaScript code snippets and explanations involving the DOM, as well as other aspects of JS. If you’ve already learned jQuery, it will help you figure out how to do things without it.
-This W3Schools article offers simple and easy-to-understand lessons on the DOM.
-JS DOM Crash Course is an extensive and well explained 4 part video series on the DOM by Traversy Media.
-Understanding The Dom is an aptly named article-based tutorial series by DigitalOcean.
-Introduction to events by MDN covers the same topics you learned in this lesson on events.
+    - Eloquent JS - DOM (http://eloquentjavascript.net/13_dom.html)
+    - Eloquent JS - Handling Events (http://eloquentjavascript.net/14_event.html)
+    - DOM Enlightenment (http://domenlightenment.com/)
+    - Plain JavaScript (https://plainjs.com/javascript/) is a reference of JavaScript code snippets and explanations involving the DOM, as well as other aspects of JS. If you’ve already learned jQuery, it will help you figure out how to do things without it.
+    - This W3Schools (https://www.w3schools.com/js/js_htmldom.asp) article offers simple and easy-to-understand lessons on the DOM.
+    - JS DOM Crash Course (https://www.youtube.com/watch?v=0ik6X4DJKCc&list=PLillGF-RfqbYE6Ik_EuXA2iZFcE082B3s) is an extensive and well explained 4 part video series on the DOM by Traversy Media.
+    - Understanding The Dom (https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model) is an aptly named article-based tutorial series by DigitalOcean.
+    - Introduction to events (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) by MDN covers the same topics you learned in this lesson on events.
 
 
 html:
