@@ -186,16 +186,16 @@ There are three primary ways to go about this: You can specify function attribut
 We’re going to create 3 buttons that all alert “Hello World” when clicked. Try them all out using your own HTML file, or using something like CodePen.
 
 Method 1
-<button onclick="alert('Hello World')">Click Me</button>
+    - <button onclick="alert('Hello World')">Click Me</button>
 This solution is less than ideal because we’re cluttering our HTML with JavaScript. Also, we can only set one “onclick” property per DOM element, so we’re unable to run multiple separate functions in response to a click event using this method.
 
 Method 2
 <!-- the HTML file -->
-<button id="btn">Click Me</button>
+    - <button id="btn">Click Me</button>
 // the JavaScript file
-const btn = document.querySelector('#btn');
-btn.onclick = () => alert("Hello World");
-(Need to review arrow functions?)
+    - const btn = document.querySelector('#btn');
+    - btn.onclick = () => alert("Hello World");
+(Need to review arrow functions?) (http://javascript.info/arrow-functions-basics)
 This is a little better. We’ve moved the JS out of the HTML and into a JS file, but we still have the problem that a DOM element can only have 1 “onclick” property.
 
 Method 3
@@ -310,3 +310,14 @@ This W3Schools article offers simple and easy-to-understand lessons on the DOM.
 JS DOM Crash Course is an extensive and well explained 4 part video series on the DOM by Traversy Media.
 Understanding The Dom is an aptly named article-based tutorial series by DigitalOcean.
 Introduction to events by MDN covers the same topics you learned in this lesson on events.
+
+
+html:
+<button id="btn4" onclick="alertFunction()">CLICK MEEE</button>
+
+js:
+function alertFunction() {
+    alert("YAY! YOU DID IT!");
+  }
+
+btn4.addEventListener('click', alertFunction);

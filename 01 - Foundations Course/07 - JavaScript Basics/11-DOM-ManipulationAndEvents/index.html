@@ -10,6 +10,21 @@
       THE TITLE OF YOUR WEBPAGE
     </h1>
     <div id="container"></div>
+    <button id="btn1">Click Me</button>
+    <button id="btn2">Click Me Too</button>
+    <!-- The id attribute must be unique within the HTML document. To resolve this, you 
+        should assign different id values to each button. -->
+
+    <button id="btn3" onclick="alertFunction()">CLICK ME BABY</button>
+    <button id="btn4" onclick="alertFunction()">CLICK MEEE</button>
+    <!-- The alert function is popping up twice because you have defined two separate ways to execute 
+        the alertFunction when the button is clicked.
+        In your HTML code, you have an onclick attribute assigned to the button, which triggers the 
+        alertFunction when the button is clicked:
+        Additionally, in your JavaScript code, you are attaching an event listener to the btn4 button, 
+        which also executes the alertFunction when the button is clicked:
+        As a result, when you click the button, both the onclick attribute and the event listener 
+        execute the alertFunction, causing the alert to appear twice.-->
     <script src="script.js"></script>
   </body>
 </html>
